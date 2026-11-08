@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#ffe17c">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Class 10 — Command Centre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,13 @@
 @media(max-width:680px){.app{grid-template-columns:1fr}.sidebar{position:fixed;left:-285px;width:270px;top:0;transition:left .2s;box-shadow:8px 0 0 #000}.sidebar.open{left:0}.mobile-menu{display:inline-block}.topbar{height:64px;padding:0 14px}.content{padding:18px 13px}.page-head{align-items:flex-start;flex-direction:column}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat-num{font-size:29px}.split,.subject-layout,.calendar-lower,.two-col{grid-template-columns:1fr}.subject-list{grid-template-columns:repeat(2,minmax(0,1fr))}.subject-pick{font-size:12px;padding:9px}.check-grid{grid-template-columns:1fr}.dayname,.day{padding:5px;min-height:65px}.event-dot{font-size:8px;padding:2px}.day .num{font-size:11px}.top-actions .tiny-btn{font-size:10px;padding:7px}.calendar{font-size:11px}.exam-grid{grid-template-columns:1fr}}
 </style></head>
 <body><div class="app">
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js");
+    });
+  }
+</script>
 <aside class="sidebar" id="sidebar"><div class="brand-wrap"><div class="brand-mark">ϟ</div><div class="brand">CLASS X<small>COMMAND CENTRE · 2026–27</small></div></div>
 <div class="nav-label">WORKSPACE</div><nav class="nav">
 <button class="nav-btn active" data-page="tracker"><span class="nav-icon">☷</span> Study Tracker</button>
